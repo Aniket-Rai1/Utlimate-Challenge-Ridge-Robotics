@@ -19,9 +19,9 @@ public class TestArm extends AutonomousControl {
         telemetry.update();
 
         if (opModeIsActive()){
-//hi
-            rob.encoderMovement(0.5, 20, 10, 1000, Goal.movements.clawIn, rob.claw);
 
+            //rob.encoderMovement(0.5, 1, 10, 1000, Goal.movements.clawIn, rob.claw);
+            rob.grabber.setPosition(.5);
         }
 
 

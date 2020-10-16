@@ -37,6 +37,7 @@ import static org.firstinspires.ftc.robotcore.external.tfod.TfodSkyStone.TFOD_MO
 import static org.firstinspires.ftc.teamcode.Control.Constants.COUNTS_PER_COREHEXMOTOR_INCH;
 import static org.firstinspires.ftc.teamcode.Control.Constants.COUNTS_PER_GOBUILDA435RPM_INCH;
 import static org.firstinspires.ftc.teamcode.Control.Constants.claws;
+import static org.firstinspires.ftc.teamcode.Control.Constants.grabbers;
 import static org.firstinspires.ftc.teamcode.Control.Constants.imuS;
 import static org.firstinspires.ftc.teamcode.Control.Constants.motorBLS;
 import static org.firstinspires.ftc.teamcode.Control.Constants.motorBRS;
@@ -129,6 +130,7 @@ public class Goal {
 
     public DcMotor claw;
 
+    public Servo grabber;
     public BNO055IMUImpl imu;
 
 
@@ -167,6 +169,7 @@ public class Goal {
 
     public void setupClaw() throws InterruptedException {
         claw = motor(claws, DcMotorSimple.Direction.FORWARD, DcMotor.ZeroPowerBehavior.BRAKE);
+        grabber = servo(grabbers, Servo.Direction.FORWARD, 0, 1, .5);
 
         motorDriveMode(EncoderMode.ON, claw);
     }
