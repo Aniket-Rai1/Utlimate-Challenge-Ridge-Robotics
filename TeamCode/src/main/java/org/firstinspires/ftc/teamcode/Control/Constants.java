@@ -60,6 +60,8 @@ public class Constants {
     public static final String motorBRS = "motorBR";
     public static final String motorBLS = "motorBL";
 
+    public static final String claws = "claw";
+
     public static final String imuS = "imu";
 
 }

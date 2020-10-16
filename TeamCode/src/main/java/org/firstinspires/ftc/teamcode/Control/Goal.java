@@ -36,6 +36,7 @@ import static org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocaliz
 import static org.firstinspires.ftc.robotcore.external.tfod.TfodSkyStone.TFOD_MODEL_ASSET;
 import static org.firstinspires.ftc.teamcode.Control.Constants.COUNTS_PER_COREHEXMOTOR_INCH;
 import static org.firstinspires.ftc.teamcode.Control.Constants.COUNTS_PER_GOBUILDA435RPM_INCH;
+import static org.firstinspires.ftc.teamcode.Control.Constants.claws;
 import static org.firstinspires.ftc.teamcode.Control.Constants.imuS;
 import static org.firstinspires.ftc.teamcode.Control.Constants.motorBLS;
 import static org.firstinspires.ftc.teamcode.Control.Constants.motorBRS;
@@ -56,6 +57,7 @@ public class Goal {
             switch (type) {
                 case teleop:
                     setupDrivetrain();
+                    setupClaw();
                     break;
             }
 
@@ -125,6 +127,8 @@ public class Goal {
     public DcMotor motorBR;
     public DcMotor motorBL;
 
+    public DcMotor claw;
+
     public BNO055IMUImpl imu;
 
 
@@ -159,6 +163,12 @@ public class Goal {
         motorBL = motor(motorBLS, DcMotorSimple.Direction.REVERSE, DcMotor.ZeroPowerBehavior.BRAKE);
 
         motorDriveMode(EncoderMode.ON, motorFR, motorFL, motorBR, motorBL);
+    }
+
+    public void setupClaw() throws InterruptedException {
+        claw = motor(claws, DcMotorSimple.Direction.FORWARD, DcMotor.ZeroPowerBehavior.BRAKE);
+
+        motorDriveMode(EncoderMode.ON, claw);
     }
 
 
