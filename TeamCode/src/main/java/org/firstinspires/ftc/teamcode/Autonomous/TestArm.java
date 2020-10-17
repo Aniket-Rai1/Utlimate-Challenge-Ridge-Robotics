@@ -20,8 +20,8 @@ public class TestArm extends AutonomousControl {
 
         if (opModeIsActive()){
 
-            //rob.encoderMovement(0.5, 1, 10, 1000, Goal.movements.clawIn, rob.claw);
-            rob.grabber.setPosition(.5);
+            rob.encoderMovement(0.5, 1, 10, 1000, Goal.movements.clawIn, rob.claw);
+           // rob.grabber.setPosition(.5);
         }
 
 
