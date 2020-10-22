@@ -62,6 +62,9 @@ public class Constants {
 
     public static final String claws = "claw";
 
+    public static final String pincher = "pinch";
+
+
     public static final String imuS = "imu";
 
 }

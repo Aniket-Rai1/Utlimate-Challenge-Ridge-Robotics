@@ -19,11 +19,7 @@ public class Test extends AutonomousControl {
 
         if (opModeIsActive()){
 
-            rob.driveTrainEncoderMovement(0.2, 40, 10, 50000, Goal.movements.right);
-            //rob.driveTrainMovement(0.25, Goal.movements.right);\
-            sleep(4000);
-            //rob.driveTrainMovement(0.5, Goal.movements.forward);
-            sleep(2500);
+            rob.driveTrainEncoderMovement(0.2, 40, 10, 0, Goal.movements.right);
 
         }
 

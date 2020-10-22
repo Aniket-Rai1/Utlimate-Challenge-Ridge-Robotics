@@ -20,7 +20,9 @@ public class TestArm extends AutonomousControl {
 
         if (opModeIsActive()){
 
-            rob.encoderMovement(0.5, 20, 10, 1000, Goal.movements.clawIn, rob.claw);
+            //rob.encodeCoreHexMovement(.2, 10, 2, 100, Goal.movements.clawIn, rob.claw);
+            rob.pinch.setPosition(0.5);
+            sleep(1000);
 
         }
 

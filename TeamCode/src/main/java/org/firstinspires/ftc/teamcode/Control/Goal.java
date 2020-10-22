@@ -42,6 +42,7 @@ import static org.firstinspires.ftc.teamcode.Control.Constants.motorBLS;
 import static org.firstinspires.ftc.teamcode.Control.Constants.motorBRS;
 import static org.firstinspires.ftc.teamcode.Control.Constants.motorFLS;
 import static org.firstinspires.ftc.teamcode.Control.Constants.motorFRS;
+import static org.firstinspires.ftc.teamcode.Control.Constants.pincher;
 
 public class Goal {
 
@@ -129,6 +130,8 @@ public class Goal {
 
     public DcMotor claw;
 
+    public Servo pinch;
+
     public BNO055IMUImpl imu;
 
 
@@ -167,6 +170,7 @@ public class Goal {
 
     public void setupClaw() throws InterruptedException {
         claw = motor(claws, DcMotorSimple.Direction.FORWARD, DcMotor.ZeroPowerBehavior.BRAKE);
+        pinch = servo(pincher, Servo.Direction.FORWARD, 0, 1, 0);
 
         motorDriveMode(EncoderMode.ON, claw);
     }
@@ -644,10 +648,10 @@ public class Goal {
     public enum movements
     {
         // FR FL BR BL
-        right(1, 1, -1, -1),
-        left(-1, -1, 1, 1),
-        backward(1, -1, 1, -1),
-        forward(-1, 1, -1, 1),
+        left(1, 1, -1, -1),
+        right(-1, -1, 1, 1),
+        forward(1, -1, 1, -1),
+        backward(-1, 1, -1, 1),
         br(0, -1, 1, 0),
         bl(1, 0, 0, -1),
         tl(0, 1, -1, 0),
