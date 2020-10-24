@@ -70,7 +70,7 @@ public class Goal {
 
     }
 
-    // important non-confdiguration fields
+    // important non-confdiguration field
     public ElapsedTime runtime;     //set in constructor to the runtime of running class
     public Central central;
     public HardwareMap hardwareMap;
