@@ -9,7 +9,7 @@ import org.firstinspires.ftc.teamcode.Control.Goal;
 @Autonomous(name="Test Drivetrain", group = "basic")
 public class Test extends AutonomousControl {
     private ElapsedTime runtime = new ElapsedTime();
-
+//hi
     @Override
     public void runOpMode() throws InterruptedException {
 
