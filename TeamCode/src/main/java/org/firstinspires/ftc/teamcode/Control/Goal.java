@@ -58,6 +58,8 @@ public class Goal {
             switch (type) {
                 case teleop:
                     setupDrivetrain();
+                    break;
+                case claw:
                     setupClaw();
                     break;
             }
@@ -172,7 +174,7 @@ public class Goal {
         claw = motor(claws, DcMotorSimple.Direction.FORWARD, DcMotor.ZeroPowerBehavior.BRAKE);
         pinch = servo(pincher, Servo.Direction.FORWARD, 0, 1, 0);
 
-        motorDriveMode(EncoderMode.ON, claw);
+        motorDriveMode(EncoderMode.OFF, claw);
     }
 
 

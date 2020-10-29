@@ -14,14 +14,14 @@ public class TestArm extends AutonomousControl {
     @Override
     public void runOpMode() throws InterruptedException {
 
-        setup(runtime, Goal.setupType.teleop);
+        setup(runtime, Goal.setupType.teleop, Goal.setupType.claw);
         telemetry.addLine("Start!");
         telemetry.update();
 
         if (opModeIsActive()){
 
-            //rob.encodeCoreHexMovement(.2, 10, 2, 100, Goal.movements.clawIn, rob.claw);
-            rob.pinch.setPosition(0.5);
+            rob.encodeCoreHexMovement(0.75, 3, 2, 100, Goal.movements.clawIn, rob.claw);
+            //rob.pinch.setPosition(0.5);
             sleep(1000);
 
         }
